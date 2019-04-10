@@ -1,0 +1,35 @@
+<main>
+	<div class="container">
+		<center>
+			<h2>Supplier Details</h2>
+		</center>
+		<table class="responsive-table highlight">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Supplier Name</th>
+					<th>Contact</th>
+					<th>Address</th>
+					<th>Delete</th>
+					<th>Edit</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for i in suppliers %}
+					<tr>
+						<td>{{i.id}}</td>
+						<td>{{i.sname}}</td>
+						<td>{{i.contact}}</td>
+						<td>{{i.address}}</td>
+						<td>
+							<a href="#"><i class="material-icons">delete_forever</i></a>
+						</td>
+						<td>
+							<a href="#"><i class="material-icons">border_color</i></a>
+						</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</main>

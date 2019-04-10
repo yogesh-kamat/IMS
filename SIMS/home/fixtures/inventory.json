@@ -1,0 +1,71 @@
+[
+	{
+		"model": "home.Inventory", 
+		"pk": 1, 
+		"fields": {
+			"pname": "Pen", 
+			"quantity": 35, 
+			"measurement": "Piece",
+			"orginal_price": 25,
+			"profit": 10, 
+			"selling_price": 35,
+			"supplier": 1
+		}
+	},
+
+	{
+		"model": "home.Inventory", 
+		"pk": 2, 
+		"fields": {
+			"pname": "Sugar", 
+			"quantity": 50, 
+			"measurement": "Kilogram",
+			"orginal_price": 52,
+			"profit": 8, 
+			"selling_price": 60,
+			"supplier": 2
+		}
+	},
+
+	{
+		"model": "home.Inventory", 
+		"pk": 3, 
+		"fields": {
+			"pname": "Eraser", 
+			"quantity": 50, 
+			"measurement": "Piece",
+			"orginal_price": 5,
+			"profit": 2, 
+			"selling_price": 7,
+			"supplier": 1
+		}
+	},
+
+	{
+		"model": "home.Inventory", 
+		"pk": 4, 
+		"fields": {
+			"pname": "Pencil", 
+			"quantity": 47, 
+			"measurement": "Piece",
+			"orginal_price": 7,
+			"profit": 3, 
+			"selling_price": 10,
+			"supplier": 3
+		}
+	},
+
+	{
+		"model": "home.Inventory", 
+		"pk": 5, 
+		"fields": {
+			"pname": "Bread", 
+			"quantity": 61, 
+			"measurement": "Piece",
+			"orginal_price": 32,
+			"profit": 8, 
+			"selling_price": 40,
+			"supplier": 2
+		}
+	}
+]

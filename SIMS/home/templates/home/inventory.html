@@ -1,0 +1,44 @@
+<main>
+	<main>
+	<div class="container">
+		<center>
+			<h2>Inventory Details</h2>
+		</center>
+		<table class="responsive-table highlight">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Product Name</th>
+					<th>Quantity</th>
+					<th>Measurement</th>
+					<th>Orignal Price</th>
+					<th>Profit</th>
+					<th>Selling Price</th>
+					<th>Supplier</th>
+					<th>Delete</th>
+					<th>Edit</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for i in inventory %}
+					<tr>
+						<td>{{i.id}}</td>
+						<td>{{i.pname}}</td>
+						<td>{{i.quantity}}</td>
+						<td>{{i.measurement}}</td>
+						<td>{{i.orginal_price}}</td>
+						<td>{{i.profit}}</td>
+						<td>{{i.selling_price}}</td>
+						<td>{{i.supplier}}</td>
+						<td>
+							<a href="#"><i class="material-icons">delete_forever</i></a>
+						</td>
+						<td>
+							<a href="#"><i class="material-icons">border_color</i></a>
+						</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</main>

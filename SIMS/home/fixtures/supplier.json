@@ -1,0 +1,41 @@
+[
+	{
+		"model": "home.Supplier", 
+		"pk": 1, 
+		"fields": {
+			"sname": "Smart Suppliers", 
+			"contact": "7021426622", 
+			"address": "dadar west mumbai 400028"
+		}
+	},
+
+	{
+		"model": "home.Supplier", 
+		"pk": 2, 
+		"fields": {
+			"sname": "MLP Distributors", 
+			"contact": "7021426623", 
+			"address": "dadar west mumbai 400027"
+		}
+	},
+
+	{
+		"model": "home.Supplier", 
+		"pk": 3, 
+		"fields": {
+			"sname": "LK Supplier", 
+			"contact": "7021426621", 
+			"address": "dadar west mumbai 400021"
+		}
+	},
+
+	{
+		"model": "home.Supplier", 
+		"pk": 4, 
+		"fields": {
+			"sname": "MN suppliers", 
+			"contact": "7021426620", 
+			"address": "dadar west mumbai 400022"
+		}
+	}
+]
