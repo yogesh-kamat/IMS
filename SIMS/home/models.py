@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 class Supplier(models.Model):
 	sname			= models.CharField(max_length=255, unique=True)
-	contact			= models.PositiveIntegerField()
+	contact			= models.CharField(max_length=255)
 	address			= models.TextField(max_length=255)
 
 	def __str__(self):

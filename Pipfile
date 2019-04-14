@@ -11,6 +11,8 @@ psycopg2-binary = "*"
 django-easy-pdf = "*"
 weasyprint = "*"
 django-debug-toolbar = "*"
+django-heroku = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.7"

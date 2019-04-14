@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 
+# added by me 
+import django_heroku
+
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -23,10 +27,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'q_)qt%59vq#r6sw5&yuf!gag=qys-z^zy&lt!03@yd_vti!(^m'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['fe4b67e1.ngrok.io','localhost']
-INTERNAL_IPS = ['127.0.0.1','fe4b67e1.ngrok.io']
+ALLOWED_HOSTS = ['localhost']
+INTERNAL_IPS = ['127.0.0.1']
 
 # Application definition
 
@@ -85,10 +89,15 @@ WSGI_APPLICATION = 'SIMS.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'sims',
+        'USER': 'simsadmin',
+        'PASSWORD': 'password',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
+
 
 
 
@@ -133,5 +142,7 @@ STATIC_URL = '/static/'
 # Added by me...
 LOGIN_URL = '/users/login/'
 
+# Activate Django-Heroku.
+django_heroku.settings(locals())
 
 

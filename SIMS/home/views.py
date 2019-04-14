@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.conf import settings
 from easy_pdf import rendering
-
+from django.http import JsonResponse
 
 
 # Create your views here.
@@ -113,7 +113,12 @@ def report(request):
 
 
 def chart(request):
+    listOfSuppliers = Supplier.objects.all()
+    listOfSuppliers = [i.sname for i in listOfSuppliers]
+    dataOfProducts = Inventory.objects.all()
     context = {
-
+        'listOfSuppliers':listOfSuppliers,
+        'dataOfProducts':dataOfProducts,
     }
-    return render(request, 'home/index.html', context)
+    return render(request, 'home/chart.html',context)
+
