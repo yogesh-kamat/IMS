@@ -123,6 +123,7 @@ COMMIT;
 ```
 
 ### Total Migrations : 
+```
 admin
  [X] 0001_initial
  [X] 0002_logentry_remove_auto_add
@@ -146,7 +147,7 @@ home
  [X] 0001_initial
 sessions
  [X] 0001_initial
-
+```
 
 ### Instructions for hosting to heroku : 
 Install following : 
@@ -176,6 +177,12 @@ git add .
 git commit -m "msg"
 git push heroku master
 heroku ps:scale web=1
+heroku run bash
+cd SIMS
+python3 manage.py migrate
+python3 manage.py loaddata supplier
+python3 manage.py loaddata inventory
+python3 manage.py createsuperuser
 heroku open
 ```
 
