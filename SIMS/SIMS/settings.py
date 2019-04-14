@@ -31,7 +31,7 @@ SECRET_KEY = 'q_)qt%59vq#r6sw5&yuf!gag=qys-z^zy&lt!03@yd_vti!(^m'
 DEBUG = True
 
 ALLOWED_HOSTS = ['localhost','127.0.0.1','https://sales-inventory-management.herokuapp.com/']
-INTERNAL_IPS = ['127.0.0.1','https://sales-inventory-management.herokuapp.com/','localhost']
+INTERNAL_IPS = ['127.0.0.1','https://sales-inventory-management.herokuapp.com/','localhost','52.21.245.216']
 
 # Application definition
 
