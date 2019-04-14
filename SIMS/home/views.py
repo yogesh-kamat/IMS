@@ -3,7 +3,6 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.conf import settings
 from easy_pdf import rendering
-
 from django.db import connection
 
 # Create your views here.
@@ -21,8 +20,12 @@ def index(request):
 @login_required
 def inventory(request):
     inventory       = Inventory.objects.all()
+    total_products  = Inventory.objects.all().count()
+    total_value     = [ i.quantity * i.selling_price for i in inventory]
     context         = {
         'inventory':inventory,
+        'total_products':total_products,
+        'total_value': sum(total_value)
     }
     return render(request, 'home/index.html', context)
 
