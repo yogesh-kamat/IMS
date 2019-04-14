@@ -8,19 +8,22 @@
         <ul class="right hide-on-med-and-down">
             <li><a href="{% url 'home' %}">Manage Supplier</a></li>
             <li><a href="{% url 'inventory' %}">Manage Inventory</a></li>
-            <li><a href="#">Checkout</a></li>
-            <li><a href="#">Transaction</a></li>
-            <li><a href="#">Generate Report</a></li>
+            <li><a href="{% url 'checkout' %}">Checkout</a></li>
+            <li><a href="{% url 'transaction' %}">Transaction</a></li>
+            <li><a href="{% url 'report' %}">Generate Report</a></li>
+            <li><a href="{% url 'chart' %}">Charts</a></li>
+
             <li><a href="{% url 'logout' %}" class="waves-effect waves-light btn blue darken-4">Logout</a></li>
         </ul>
     </div>
 </nav>
 <ul class="sidenav" id="mobile-view">
 	<li><a href="{% url 'logout' %}" class="waves-effect waves-light btn blue darken-4">Logout</a></li>
-    <li><a href="#">Manage Supplier</a></li>
-    <li><a href="#">Manage Inventory</a></li>
-    <li><a href="#">Checkout</a></li>
-    <li><a href="#">Transaction</a></li>
-    <li><a href="#">Generate Report</a></li>
+    <li><a href="{% url 'home' %}">Manage Supplier</a></li>
+    <li><a href="{% url 'inventory' %}">Manage Inventory</a></li>
+    <li><a href="{% url 'checkout' %}">Checkout</a></li>
+    <li><a href="{% url 'transaction' %}">Transaction</a></li>
+    <li><a href="{% url 'report' %}">Generate Report</a></li>
+    <!--<li><a href="{% url 'chart' %}">Charts</a></li>-->
 </ul>
 <!--Navbar Ends-->

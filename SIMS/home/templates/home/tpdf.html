@@ -1,9 +1,14 @@
+{% extends "easy_pdf/base.html" %}
+
+{% block content %}
 <main>
 	<div class="container">
 		<center>
+			<h1>S I M S Reports</h1>
+			<h1>Username : {{user}}</h1>
 			<h2>Transaction Details</h2>
+			<h2>{% now "jS \o\f F" %}</h2>
 		</center>
-		<div class="section"></div>
 		<table>
 			<thead>
 				<tr>
@@ -12,29 +17,20 @@
 					<th>Measurment</th>
 					<th>Price</th>
 					<th>Supplier</th>
-					<th></th>
 				</tr>
 			</thead>
 			<tbody>
-				{% for i in transactions %}
+				{% for i in transaction_report %}
 				<tr>
 					<td>{{i.cust_name}}</td>
 					<td>{{i.quantity_r}}</td>
 					<td>{{i.pid.measurement}}</td>
 					<td>{{i.actual_price}}</td>
 					<td>{{i.pid.supplier.sname}}</td>
-					<td>
-						<form method="POST">
-							{% csrf_token %}
-							<input type="hidden" name="tiddel" value="{{i.id}}">
-							<button type="submit" class="btn indigo">
-								DELETE
-							</button>
-						</form>
-					</td>
 				</tr>
 				{% endfor %}
 			</tbody>
 		</table>
 	</div>
 </main>
+{% endblock %}

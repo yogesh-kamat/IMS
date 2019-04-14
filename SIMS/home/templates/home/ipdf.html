@@ -1,16 +1,18 @@
+{% extends "easy_pdf/base.html" %}
 
-
+{% block content %}
 <main>
-	<main>
 	<div class="container">
 		<center>
+			<h1>S I M S Reports</h1>
+			<h2>Username : {{user}}</h2>
 			<h2>Inventory Details</h2>
+			<h2>{% now "jS \o\f F" %}</h2>
 		</center>
-		<div class="section"></div>
-		<table class="responsive-table highlight">
+		<table>
 			<thead>
 				<tr>
-					<th>#</th>
+					<th>Product ID</th>
 					<th>Product Name</th>
 					<th>Quantity</th>
 					<th>Measurement</th>
@@ -21,19 +23,20 @@
 				</tr>
 			</thead>
 			<tbody>
-				{% for i in inventory %}
+				{% for i in inventory_report %}
 					<tr>
-						<td>{{i.id}}</td>
+						<td>&nbsp; {{i.id}}</td>
 						<td>{{i.pname}}</td>
 						<td>{{i.quantity}}</td>
 						<td>{{i.measurement}}</td>
 						<td>{{i.orginal_price}}</td>
 						<td>{{i.profit}}</td>
 						<td>{{i.selling_price}}</td>
-						<td>S{{i.supplier}}</td>
+						<td>{{i.supplier}}</td>
 					</tr>
 				{% endfor %}
 			</tbody>
 		</table>
 	</div>
 </main>
+{% endblock %}

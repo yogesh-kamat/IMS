@@ -13,5 +13,21 @@
 {% include 'home/inventory.html' %}
 {% endif %}
 
+{% if checkout %}
+{% include 'home/checkout.html' %}
+{% endif %}
+
+{% if transactions %}
+{% include 'home/transaction.html' %}
+{% endif %}
+
+{% if report %}
+{% include 'home/report.html' %}
+{% endif %}
+
+{% if chart %}
+{% include 'home/chart.html' %}
+{% endif %}
+
 
 {% endblock body %}

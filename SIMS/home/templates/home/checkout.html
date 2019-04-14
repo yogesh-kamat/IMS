@@ -1,3 +1,147 @@
 <main>
-	
+	<center>
+		<h2>Checkout</h2>
+	</center>
+	<div class="section"></div>
+	<div class="row">
+		<div class="col s6">
+			<center><h5>Cart</h5></center>
+			<table>
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Customer Name</th>
+						<th>Product</th>
+						<th>Quantity</th>
+						<th>Price</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for i in cart %}
+						<tr>
+							<td>{{i.id}}</td>
+							<td>{{i.cust_name}}</td>
+							<td>{{i.pid_id}}</td>
+							<td>{{i.quantity_r}}</td>
+							<td>{{i.actual_price}}</td>
+							<td></td>
+							<td>
+								<form method="POST">
+									{% csrf_token %}
+									<input type="hidden" name="tiddel" value="{{i.id}}">
+									<button type="submit" class="btn indigo">
+										DELETE
+									</button>
+								</form>
+							</td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+
+			<div class="section"></div>
+			<div>
+				<form method="POST">
+					{% csrf_token %}
+					<input type="hidden" name="checkoutrequest" value="1">
+					<button class="btn btn-large indigo">Checkout</button>
+				</form>
+			</div>
+			
+		</div>
+		<div class="col s6">
+			<table class="highlight">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Product Name</th>
+					<th>Quantity</th>
+					<th>Measurement</th>
+					<th>Selling Price</th>
+					<th>Supplier</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for i in inventory_checkout %}
+					<tr>
+						<td>{{i.id}}</td>
+						<td>{{i.pname}}</td>
+						<td>{{i.quantity}}</td>
+						<td>{{i.measurement}}</td>
+						<td>{{i.selling_price}}</td>
+						<td>S{{i.supplier}}</td>
+						<td>
+							<!-- Modal Trigger -->
+							<a class="waves-effect waves-light btn modal-trigger indigo" href="#{{i.id}}">
+								<i class="material-icons">add_circle</i>
+							</a>
+							<form method="post">
+							{% csrf_token %}
+							<!-- Modal Structure -->
+							  <div id="{{i.id}}" class="modal">
+							    <div class="modal-content">
+							      <h4>Add to cart</h4>
+							      <div class="row">
+								        <div class="input-field col s12">
+								          <input id="cname" type="text" name="cname">
+								          <label for="cname">Customer Name</label>
+								        </div>
+								    </div>
+
+								    <div class="row">
+								        <div class="input-field col s12">
+								          <input disabled id="pname" type="text" value="{{i.pname}}" class="black-text">
+								          <input type="hidden" value="{{i.id}}" name="pid">
+								          <label for="panme">Product</label>
+								        </div>
+								    </div>
+
+								    <div class="row">
+								        <div class="input-field col s12">
+								          <input disabled id="quantity_a" type="text" value="{{i.quantity}}" class="black-text">
+								          <label for="quantity_a">Quantity Available</label>
+								        </div>
+								    </div>
+
+								    <div class="row">
+								        <div class="input-field col s12">
+								          <input id="quantity_r" type="text" name="qreq">
+								          <label for="quantity_r">Quantitiy Required</label>
+								        </div>
+								    </div>
+
+								    <div class="row">
+								        <div class="input-field col s12">
+								          <input disabled id="measurement" type="text" value="{{i.measurement}}" class="black-text">
+								          <label for="measurement">Measurement</label>
+								        </div>
+								    </div>
+
+								    <div class="row">
+								        <div class="input-field col s12">
+								          <input disabled id="supplier" type="text" value="{{i.supplier}}" class="black-text">
+								          <label for="supplier">Supplier</label>
+								        </div>
+								    </div>
+							    </div>
+							    <div class="modal-footer">
+							      <input type="hidden" name="pid" value="{{i.id}}">
+								  <button type="submit" class="btn indigo left">Add</button>
+							    </div>
+							  </div>
+						</form>
+						</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+		</div>
+	</div>
 </main>
+
+
+
+  
+          

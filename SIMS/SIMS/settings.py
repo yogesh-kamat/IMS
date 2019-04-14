@@ -25,7 +25,7 @@ SECRET_KEY = 'q_)qt%59vq#r6sw5&yuf!gag=qys-z^zy&lt!03@yd_vti!(^m'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['fe4b67e1.ngrok.io','localhost']
 
 
 # Application definition
@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Third-Pary Apps
+    'easy_pdf',
 
     # MyApps
     'home',
@@ -85,6 +87,7 @@ DATABASES = {
 }
 
 
+
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
@@ -123,5 +126,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATIC_ROOT = '/static/'
+
 # Added by me...
-LOGIN_URL = '/'
+LOGIN_URL = '/users/login/'

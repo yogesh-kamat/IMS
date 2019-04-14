@@ -27,4 +27,4 @@ def index(request):
 
 def logout_user(request):
     logout(request)
-    return redirect(reverse('home'))
+    return redirect(reverse('login'))

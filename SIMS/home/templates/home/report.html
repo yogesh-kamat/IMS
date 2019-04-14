@@ -1,3 +1,24 @@
 <main>
-	
+	<div class="container">
+		<center>
+			<h2>Report</h2>
+			<div class="section"></div>
+			<div class="row">
+				<div class="col s6">
+					<form method="post">
+						{% csrf_token %}
+						<input type="hidden" name="ireport" value="1">
+						<button type="submit" class="btn indigo">Inventory Report</button>
+					</form>
+				</div>
+				<div class="col s6">
+					<form method="post">
+						{% csrf_token %}
+						<input type="hidden" name="treport" value="1">
+						<button type="submit" class="btn indigo">Transaction Report</button>
+					</form>
+				</div>
+			</div>
+		</center>
+	</div>
 </main>
