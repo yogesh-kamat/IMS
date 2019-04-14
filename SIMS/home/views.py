@@ -3,7 +3,8 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.conf import settings
 from easy_pdf import rendering
-from django.db import connection
+
+
 
 # Create your views here.
 from home.models import Supplier, Inventory, Transaction

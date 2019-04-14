@@ -10,6 +10,7 @@ django = "*"
 psycopg2-binary = "*"
 django-easy-pdf = "*"
 weasyprint = "*"
+django-debug-toolbar = "*"
 
 [requires]
 python_version = "3.7"
