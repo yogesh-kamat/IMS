@@ -19,7 +19,7 @@ var myChart = new Chart(ctx, {
         labels: {{listOfSuppliers|safe}},
         datasets: [{
             label: '# SupplierGraph',
-            data: [4, 3, 2, 1],
+            data: {{dataOfProducts}},
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -47,7 +47,7 @@ var myChart = new Chart(ctx, {
                 },
                 scaleLabel: {
                     display: true,
-                    labelString: 'No. of Products in Inventory'
+                    labelString: 'Cost of No. of Products in Inventory'
                 }
             }],
             xAxes: [{

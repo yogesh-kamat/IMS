@@ -114,8 +114,12 @@ def report(request):
 
 def chart(request):
     listOfSuppliers = Supplier.objects.all()
+    dataOfProducts = []
+    for i in listOfSuppliers:
+        temp = Inventory.objects.all().filter(supplier_id = i.id)
+        dataOfProducts.append(sum([ j.quantity * j.selling_price for j in temp]))
+    print(dataOfProducts)
     listOfSuppliers = [i.sname for i in listOfSuppliers]
-    dataOfProducts = Inventory.objects.all()
     context = {
         'listOfSuppliers':listOfSuppliers,
         'dataOfProducts':dataOfProducts,
