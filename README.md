@@ -1,4 +1,4 @@
-# sales-and-inventory-management (using django)
+# sales-and-inventory-management-system (using django)
 
 ### To setup virtual environment for the project and to install dependencies type : pipenv install
 ### After that to start the WebApp type : python manage.py runserver
