@@ -1,7 +1,9 @@
 # sales-and-inventory-management (using django)
-### To run first run pipenv install
-### Then simply type : python manage.py runserver
-### Superuser : yogesh Password : password
+
+### To setup virtual environment for the project and to install dependencies type : pipenv install
+### Then to run type : python manage.py runserver
+### For authentication :
+#### Superuser : yogesh Password : password
 #### sample users for testing : username - sampleuser password - password@123
 
 
