@@ -2,7 +2,7 @@
 ### To run first run pipenv install
 ### Then simply type : python manage.py runserver
 ### Superuser : yogesh Password : password
-#### sample users for testing : username - sample_user password - password@123
+#### sample users for testing : username - sampleuser password - password@123
 
 
 ### SQL
