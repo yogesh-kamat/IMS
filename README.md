@@ -1,2 +1,5 @@
 # sales-and-inventory-management
-## Rapid Development Under 2 to 3 hrs...
+
+### To run first run pipenv install
+### Then simply type : python manage.py runserver
+
