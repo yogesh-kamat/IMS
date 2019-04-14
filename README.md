@@ -1,10 +1,10 @@
 # sales-and-inventory-management-system (using django)
 
-### To setup virtual environment for the project and to install dependencies type : pipenv install
-### After that to start the WebApp type : python manage.py runserver
-### For authentication :
-#### Superuser : 'yogesh' | Password : 'password'
-#### Sample user for testing : username - 'sampleuser' | password - 'password@123'
+##### To setup virtual environment for the project and to install dependencies type : pipenv install
+##### After that to start the WebApp type : python manage.py runserver
+##### For authentication :
+###### Superuser : 'yogesh' | Password : 'password'
+###### Sample user for testing : username - 'sampleuser' | password - 'password@123'
 
 
 ### SQL
