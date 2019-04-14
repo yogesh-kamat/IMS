@@ -27,10 +27,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'q_)qt%59vq#r6sw5&yuf!gag=qys-z^zy&lt!03@yd_vti!(^m'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+# Actually I m leaving this turn on because this is just my hobby project
+DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','127.0.0.1',]
-INTERNAL_IPS = ['127.0.0.1','https://sales-inventory-management.herokuapp.com/']
+ALLOWED_HOSTS = ['localhost','127.0.0.1','https://sales-inventory-management.herokuapp.com/']
+INTERNAL_IPS = ['127.0.0.1','https://sales-inventory-management.herokuapp.com/','localhost']
 
 # Application definition
 
