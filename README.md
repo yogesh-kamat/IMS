@@ -159,8 +159,10 @@ Install following :
 2. gunicorn
 
 After installing Create Procfile in project root with following line:
+```
 web: gunicorn project_name.wsgi
 web: python project/manage.py runserver 0.0.0.0:$PORT
+```
 
 
 Add following lines in settings.py :
