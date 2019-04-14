@@ -28,10 +28,10 @@ SECRET_KEY = 'q_)qt%59vq#r6sw5&yuf!gag=qys-z^zy&lt!03@yd_vti!(^m'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # Actually I m leaving this turn on because this is just my hobby project
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['localhost','127.0.0.1','https://sales-inventory-management.herokuapp.com/']
-INTERNAL_IPS = ['127.0.0.1','https://sales-inventory-management.herokuapp.com/','localhost','52.21.245.216']
+
 
 # Application definition
 
@@ -146,4 +146,28 @@ LOGIN_URL = '/users/login/'
 # Activate Django-Heroku.
 django_heroku.settings(locals())
 
+
+# settings for DEBUG TOOLBAR
+def custom_show_toolbar(request):
+     return True  # Always show toolbar, for example purposes only.
+
+DEBUG_TOOLBAR_CONFIG = {
+    'SHOW_TOOLBAR_CALLBACK': 'SIMS.settings.custom_show_toolbar',
+}
+
+
+DEBUG_TOOLBAR_PANELS = [
+    # 'debug_toolbar.panels.versions.VersionsPanel',
+    # 'debug_toolbar.panels.timer.TimerPanel',
+    # 'debug_toolbar.panels.settings.SettingsPanel',
+    # 'debug_toolbar.panels.headers.HeadersPanel',
+    # 'debug_toolbar.panels.request.RequestPanel',
+    'debug_toolbar.panels.sql.SQLPanel',
+    # 'debug_toolbar.panels.staticfiles.StaticFilesPanel',
+    # 'debug_toolbar.panels.templates.TemplatesPanel',
+    # 'debug_toolbar.panels.cache.CachePanel',
+    # 'debug_toolbar.panels.signals.SignalsPanel',
+    # 'debug_toolbar.panels.logging.LoggingPanel',
+    # 'debug_toolbar.panels.redirects.RedirectsPanel',
+]
 

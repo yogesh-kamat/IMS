@@ -169,7 +169,7 @@ Activate Django-Heroku.
 ```
 django_heroku.settings(locals())
 ```
-Then set DEBUG = False (for production but I am leaving it as it is...)
+Then set DEBUG = False 
 
 #### Finally Run following commands in projects root directory : 
 ```
