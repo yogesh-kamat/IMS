@@ -3,8 +3,8 @@
 ### To setup virtual environment for the project and to install dependencies type : pipenv install
 ### After that to start the WebApp type : python manage.py runserver
 ### For authentication :
-#### Superuser : yogesh Password : password
-#### sample users for testing : username - sampleuser password - password@123
+#### Superuser : 'yogesh' | Password : 'password'
+#### sample users for testing : username - 'sampleuser' | password - 'password@123'
 
 
 ### SQL
