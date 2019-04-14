@@ -4,7 +4,7 @@
 ### After that to start the WebApp type : python manage.py runserver
 ### For authentication :
 #### Superuser : 'yogesh' | Password : 'password'
-#### sample users for testing : username - 'sampleuser' | password - 'password@123'
+#### Sample user for testing : username - 'sampleuser' | password - 'password@123'
 
 
 ### SQL
