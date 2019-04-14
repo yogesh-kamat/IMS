@@ -148,13 +148,15 @@ sessions
  [X] 0001_initial
 
 
-#### Instructions for hosting to heroku : 
+### Instructions for hosting to heroku : 
 Install following : 
 1. django-heroku
 2. gunicorn
 
 After installing Create Procfile in project root with following line:
 web: gunicorn project_name.wsgi
+web: python project/manage.py runserver 0.0.0.0:$PORT
+
 
 Add following lines in settings.py :
 ```
@@ -170,6 +172,11 @@ Then set DEBUG = False
 ```
 heroku login
 heroku create app-name
+git add .
+git commit -m "msg"
+git push heroku master
+heroku ps:scale web=1
+heroku open
 ```
 
 
