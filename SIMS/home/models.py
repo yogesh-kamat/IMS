@@ -33,4 +33,16 @@ class Transaction(models.Model):
 
 	def actual_price(self):
 		return int(self.quantity_r) * int(self.pid.selling_price)
+
+
+class SupplierProductCostView(models.Model):
+	id				= models.PositiveIntegerField(primary_key=True)
+	sname		 	= models.CharField(max_length=255)
+	price    		= models.PositiveIntegerField()
+
+	class Meta:
+		db_table 	= 'home_supplierproductcostview'
+		managed 	= False
 	
+	def __str__(self):
+		return str(self.id) + ' ' + self.sname + ' ' + str(self.price)

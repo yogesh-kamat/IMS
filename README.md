@@ -153,6 +153,18 @@ sessions
  [X] 0001_initial
 ```
 
+### SQL to create view and demonstrate joins : 
+```
+create view home_SupplierProductCostView as
+select b.id, b.sname, sum(a.quantity*a.selling_price) as price
+from home_inventory as a right join home_supplier as b
+on a.supplier_id = b.id
+group by a.supplier_id,b.id
+order by b.id;
+
+select * from home_SupplierProductCostView;
+```
+
 ### Instructions for hosting to heroku : 
 Install following : 
 1. django-heroku

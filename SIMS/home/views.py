@@ -7,7 +7,7 @@ from django.http import JsonResponse
 
 
 # Create your views here.
-from home.models import Supplier, Inventory, Transaction
+from home.models import Supplier, Inventory, Transaction, SupplierProductCostView
 
 
 @login_required
@@ -20,7 +20,7 @@ def index(request):
 
 @login_required
 def inventory(request):
-    inventory       = Inventory.objects.all()
+    inventory       = Inventory.objects.all().order_by('id')
     total_products  = Inventory.objects.all().count()
     total_value     = [ i.quantity * i.selling_price for i in inventory]
     context         = {
@@ -33,7 +33,7 @@ def inventory(request):
 @login_required
 def checkout(request, *args, **kwargs):
     user            = request.user
-    inventory       = Inventory.objects.all()
+    inventory       = Inventory.objects.all().order_by('id')
     cart            = Transaction.objects.all().filter(uid_id = user.id,success=0)
     context         = {
         'checkout':1,
@@ -113,13 +113,9 @@ def report(request):
 
 
 def chart(request):
-    listOfSuppliers = Supplier.objects.all()
-    dataOfProducts = []
-    for i in listOfSuppliers:
-        temp = Inventory.objects.all().filter(supplier_id = i.id)
-        dataOfProducts.append(sum([ j.quantity * j.selling_price for j in temp]))
-    print(dataOfProducts)
-    listOfSuppliers = [i.sname for i in listOfSuppliers]
+    listOfSuppliers = [i['sname'] for i in SupplierProductCostView.objects.all().values('sname')]
+    dataOfProducts  = [i['price'] if i['price'] is not None else 0 for i in SupplierProductCostView.objects.all().values('price')]
+    print(listOfSuppliers,dataOfProducts)
     context = {
         'listOfSuppliers':listOfSuppliers,
         'dataOfProducts':dataOfProducts,
