@@ -1,5 +1,6 @@
 # sales-and-inventory-management-system (using django)
 
+### DBMS Project  
 ##### To setup virtual environment for the project and to install dependencies type : pipenv install
 ##### After that to start the WebApp type : python manage.py runserver
 ##### For authentication :
