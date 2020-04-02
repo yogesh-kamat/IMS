@@ -1,6 +1,6 @@
 # sales-and-inventory-management-system (using django)
 
-### DBMS Project  
+## DBMS Project  
 ##### To setup virtual environment for the project and to install dependencies type : pipenv install
 ##### After that to start the WebApp type : python manage.py runserver
 ##### For authentication :
@@ -17,7 +17,7 @@ create user simsadmin with encrypted password 'password';
 grant all privileges on database sims to simsadmin;
 ```
 
-### Total Migrations : 
+### Total Migrations
 ```
 admin
  [X] 0001_initial
@@ -44,7 +44,7 @@ sessions
  [X] 0001_initial
 ```
 
-### SQL to create view and demonstrate joins : 
+### SQL to create view and demonstrate joins
 ```
 create view home_SupplierProductCostView as
 select b.id, b.sname, sum(a.quantity*a.selling_price) as price
@@ -56,7 +56,7 @@ order by b.id;
 select * from home_SupplierProductCostView;
 ```
 
-### Instructions for hosting to heroku : 
+## Instructions for hosting to heroku
 Install following : 
 1. django-heroku
 2. gunicorn
@@ -78,7 +78,7 @@ django_heroku.settings(locals())
 ```
 Then set DEBUG = False 
 
-#### Finally Run following commands in projects root directory : 
+### Finally Run following commands in projects root directory : 
 ```
 heroku login
 heroku create app-name
