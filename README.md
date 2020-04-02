@@ -57,7 +57,7 @@ select * from home_SupplierProductCostView;
 ```
 
 ## Instructions for hosting to heroku
-Install following : 
+Install following  
 1. django-heroku
 2. gunicorn
 
@@ -68,7 +68,7 @@ web: python project/manage.py runserver 0.0.0.0:$PORT
 ```
 
 
-Add following lines in settings.py :
+Add following lines in settings.py  
 ```
 import django_heroku
 ```
@@ -78,7 +78,7 @@ django_heroku.settings(locals())
 ```
 Then set DEBUG = False 
 
-### Finally Run following commands in projects root directory : 
+Finally Run following commands in projects root directory  
 ```
 heroku login
 heroku create app-name
