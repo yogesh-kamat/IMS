@@ -1,4 +1,4 @@
-# sales-and-inventory-management-system (using django)
+# inventory-management-system
 
 ## DBMS Project  
 ##### To setup virtual environment for the project and to install dependencies type : pipenv install
@@ -94,6 +94,3 @@ python3 manage.py loaddata inventory
 python3 manage.py createsuperuser
 heroku open
 ```
-
-
-
